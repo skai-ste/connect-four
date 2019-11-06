@@ -1,0 +1,83 @@
+* {
+  box-sizing: border-box;
+}
+#board {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.slot {
+  width: 100px;
+  height: 100px;
+  background-color: lightgrey;
+}
+.hole {
+  width: 80px;
+  height: 80px;
+  border-radius: 40px;
+  background-color: white;
+  position: relative;
+  left: 10px;
+  top: 10px;
+}
+
+.player1 .hole {
+  background-color: black;
+  transition: 0.5s ease-in-out;
+  transform: scale(-1);
+  animation-name: changing;
+  animation-duration: 1s;
+}
+@keyframes changing {
+  from {
+    background-color: white;
+  }
+  to {
+    background-color: black;
+  }
+}
+.player2 .hole {
+  background-color: grey;
+  transition: 0.5s ease-in-out;
+  transform: scale(-1);
+  animation-name: changingrey;
+  animation-duration: 1s;
+}
+@keyframes changinggrey {
+  from {
+    background-color: white;
+  }
+  to {
+    background-color: grey;
+  }
+}
+#winner-board {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  font-family: verdana;
+  font-size: 45px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+}
+#play-again {
+  position: fixed;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 6px 40px;
+  border: 2px solid white;
+  color: white;
+  font-family: verdana;
+  font-size: 15px;
+  outline: none;
+}
